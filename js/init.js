@@ -48,6 +48,8 @@ let userLog = localStorage.getItem('userLog');
 
 document.addEventListener('DOMContentLoaded' ,()=>{
   document.getElementById("correo").innerHTML += userLog;
-
-})
+  document.getElementById("cerrarSesion").addEventListener("click", function(){
+    localStorage.removeItem('item');
+  });
+});
 

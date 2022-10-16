@@ -64,36 +64,28 @@ function showProducts() {
       ((maxCost == undefined) || (maxCost != undefined && product.cost <= maxCost))) {
 
        htmlContentToAppend += `
-       <div onclick="setProductID(${product.id})" class="list-group-item list-group-item-action cursor-active">
-                <div class="list-group.item list-group-item-action">
-                  <div class="row">
-                    <div class="col-3">
-                      <img src="${
-                        product.image
-                      }"  alt="product image" class="img-thumbnail">
-                    </div>
-                    <div class="col-9">
-                       <div class="row d-flex">
-                          <div class="col">
-                             <h4>${
-                               product.name +
-                               " - " +
-                               product.currency +
-                               product.cost
-                             }</h4>
-                             <p>${product.description}</p>
-                          </div>
-                         <div class="col-3">
-                          <p class="text-muted">${
-                            product.soldCount
-                          } vendidos</p>
-                         </div >
-                       </div >
-                     </div >
-                  </div >
-                </div > 
-                `;
-    }                            
+            <div onclick="setProductID(${product.id})" class="list-group-item list-group-item-action cursor-active">
+                <div class="list-group-item list-group-item-action">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="${product.image}" alt="product image" class="img-thumbnail">
+                        </div>
+                        <div class="col-9">
+                            <div class="row d-flex">
+                                <div class="col">
+                                    <h4>${product.name + " - " + product.currency + product.cost}</h4>
+                                    <p>${product.description}</p>
+                                </div>
+                                <div class="col-3">
+                                    <p class="text-muted">${product.soldCount} vendidos</p>
+                                </div>
+                              </div>   
+                        </div>
+                  </div>
+                </div>
+             </div> 
+        `;
+    }        
     document.getElementById("car-list-container").innerHTML =
       htmlContentToAppend;
   }
