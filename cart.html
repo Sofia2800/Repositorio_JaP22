@@ -46,9 +46,52 @@
   </nav>
   <main>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
+      <br>
+      <h2 style="text-align: center;">Carrito de compras</h2><br>
+      <p class="lead">Articulos a comprar</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Nombre</th>
+            <th>Costo</th>
+            <th>Cantidad</th>
+            <th>SubTotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="cart">
+          </tr>
+        </tbody>
+      </table>
+    <p class="lead">Tipo de envío</p> 
+            <div class="custom-control custom-radio">
+              <input id="premiumradio" name="sendType" type="radio" class="custom-control-input" checked=""
+                required="">
+              <label class="custom-control-label" for="premiumradio">Premium 2 a 5 días (15%)</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input id="expressradio" name="sendType" type="radio" class="custom-control-input" required="">
+              <label class="custom-control-label" for="expressradio">Express 5 a 8 días (18%)</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input id="standardradio" name="sendType" type="radio" class="custom-control-input" required="">
+              <label class="custom-control-label" for="standardradio">Standard 12 a 15 días (5%)</label>
+            </div>    
+    <p class="lead">Direccion de envío</p>
+    <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="productName">Calle</label>
+      <input type="text" class="form-control" id="productName" value="" name="productName">
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="productNumber">Número</label>
+      <input type="number" class="form-control" id="productNumber" value="" name="productNumber">
+    </div>
+   </div>   
+    <div class="col-md-6 mb-3">
+      <label for="productCorner">Esquina</label>
+      <input type="text" class="form-control" id="productCorner" value="" name="productCorner">
     </div>
   </main>
   <footer class="text-muted">
