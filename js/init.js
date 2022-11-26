@@ -44,13 +44,17 @@ let getJSONData = function(url){
     });
 }
 
-let userLog = localStorage.getItem('userLog');
-
 document.addEventListener('DOMContentLoaded' ,()=>{
-  document.getElementById("correo").innerHTML += userLog;
   document.getElementById("cerrarSesion").addEventListener("click", function(){
-    localStorage.removeItem('item');
-    localStorage.removeItem('userLog');
+    localStorage.removeItem('datosUser');
   });
-});
 
+let usuario = JSON.parse(sessionStorage.getItem('datosUser'));
+
+console.log(usuario)
+if (usuario===null){
+    alert('Debe iniciar sesion');
+    location.href="login.html";
+}
+document.getElementById("correo").innerHTML = usuario.email;
+});

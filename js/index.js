@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function(){
         window.location = "products.html"
     });
 
-    let usuario = JSON.parse(localStorage.getItem('item'));
+    let usuario = JSON.parse(sessionStorage.getItem('datosUser'));
 
     if (usuario==null){
         alert('Debe iniciar sesion');
